@@ -1,6 +1,7 @@
 FROM alpine
 
-ADD named.conf /etc/bind/named.conf
+ADD named.conf       /etc/bind/named.conf
+ADD named.conf.views /etc/bind/volume/named.conf.views
 
 RUN apk add --update bind \
  && rm -rf /var/cache/apk/* \
